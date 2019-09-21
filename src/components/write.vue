@@ -4,6 +4,11 @@
       <div class="box">
         <div class="window">
           <h2>标题：</h2><input type="text" name="title" v-model="blog.title"><br/><br/>
+          <h2>语言：</h2><select>
+          <option value ="volvo">JAVA</option>
+          <option value ="saab">PHP</option>
+          <option value="opel">JS</option>
+        </select><br/><br/>
           <h2>简介：</h2><textarea maxlength="10" name="introduce" v-model="blog.introduce"></textarea><br/><br/>
           <h2>代码：</h2><textarea name="main" v-model="blog.main"></textarea>
           <router-link to="/login" class="dbt"><button>确认</button></router-link>
@@ -67,6 +72,11 @@
     resize:none
   }
 
+  select{
+    width: 60px;
+    height: 20px;
+  }
+
   input[name="title"]{
     width: 20%;
     height: 20px;
@@ -82,7 +92,7 @@
 
   textarea[name="main"]{
     width: 80%;
-    height: 62%;
+    height: 54%;
     font-size: 17px;
     text-align:left;
     vertical-align:top;
